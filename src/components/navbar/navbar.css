@@ -1,0 +1,87 @@
+.navbar {
+  background-color: #026aa7;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.link {
+  text-decoration: none;
+}
+.nav__img {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.nav__left {
+  display: flex;
+  width: 34%;
+}
+.nav__name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+.nav__input {
+  background-color: transparent;
+  border: 0px;
+  color: white;
+}
+.nav__input:focus {
+  outline: none;
+}
+.name__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 18px;
+  background-color: steelblue;
+  color: white;
+}
+.nav__right {
+  width: 36%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.input__btn {
+  width: 180px;
+  /* padding-left: 8px;
+  padding-right: 30px; */
+  font-size: 13px;
+  margin-top: 1px;
+  height: 32px;
+  color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.btn__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__btn {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  box-shadow: none;
+  color: #fff;
+  font-weight: 700;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 4px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  border-radius: 3px;
+}
+.nav__btn:focus {
+  outline: none;
+}

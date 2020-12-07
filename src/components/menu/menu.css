@@ -1,0 +1,75 @@
+.dashboard {
+  width: 60% !important;
+  align-items: flex-start !important;
+
+  margin: auto;
+  margin-top: 70px;
+}
+.menuoption__div {
+  list-style-type: none;
+  margin: 4px 0px;
+  width: 100%;
+
+  font-weight: 700;
+}
+.menuoption__div:hover {
+  border-radius: 6px;
+  background-color: #e4f0f6;
+  color: #0079bf;
+}
+.menuoption__list {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.section__left {
+  width: 25%;
+}
+.section__right {
+  width: 75%;
+}
+.link {
+  text-decoration: none;
+  color: #172b4d;
+}
+.link:hover {
+  color: #0079bf;
+}
+.teams__list {
+  display: flex;
+  justify-content: space-between;
+}
+.teams__head {
+  color: #5e6c84;
+  font-size: 14px;
+  padding-left: 6px;
+  font-weight: 500;
+}
+.plus__button {
+  padding-right: 10px;
+  font-weight: 600;
+  color: #5e6c84;
+}
+.card__div {
+  width: 185px;
+  position: relative;
+}
+.img__div {
+  width: 100%;
+}
+.imgs {
+  width: 100%;
+  border-radius: 4px;
+}
+.template {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+.template > h4 {
+  margin: 0px;
+  font-size: 12px;
+  padding: 5px 5px;
+  color: #172b4d;
+  background: hsla(0, 0%, 100%, 0.69);
+  border-radius: 3px;
+}
