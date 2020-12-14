@@ -3,6 +3,7 @@ import Dropdown from './Dropdown'
 import Button from './Button'
 import Card from '../../image/card.jpg'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
+import Drawer from './drawer'
 
 const BoardNav = (props) => {
     return (
@@ -20,7 +21,7 @@ const BoardNav = (props) => {
             </div>
             <div className="nav__right">
                 <Button text="Butler"/>
-                <Button text="Show More"/>
+                <Drawer/>
             </div>
         </div>
     

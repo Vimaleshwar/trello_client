@@ -10,17 +10,18 @@
   background-size: cover;
 }
 .nav__button {
-  color: #172b4d;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  border: 0px;
+  color: #172b4d !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  border: 0px !important;
   height: 32px;
-  line-height: 32px;
-  margin: 0 6px 0 0;
-  background-color: rgba(0, 0, 0, 0.08);
-  border-radius: 3px;
-  padding: 0px 6px;
+  line-height: 32px !important;
+  margin: 0 6px 0 0 !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-radius: 3px !important;
+  padding: 0px 6px !important;
+  text-transform: capitalize !important;
 }
 .nav__button:hover {
   cursor: pointer;
@@ -110,7 +111,7 @@
 .todo__filled__card {
   display: flex;
   justify-content: space-between;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 .todo__filled__button:focus {
   outline: none;
@@ -224,4 +225,35 @@
   border-radius: 3px;
   padding: 4px;
   /* padding-bottom: 2px; */
+}
+.drawer__div{
+  padding: 0px 14px;
+}
+.menu__div{
+  border-bottom:1px solid #42526e5c;
+  
+}
+.menu__div2{
+  margin-top: 24px;
+}
+.menu__btn{
+  font-size: 16px;
+  font-weight: 500;
+  color: #42526e;
+  margin: 12px 0px;
+}
+.menu__items{
+  margin: 8px 0px;
+}
+.menu__icon{
+  font-size: 20px;
+  color: #42526e;
+  margin: 0px;
+  margin-right:8px;
+}
+.menu__list{
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+  color: #42526e;
 }
