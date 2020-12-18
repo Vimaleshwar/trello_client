@@ -37,6 +37,7 @@
 .teams__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .teams__head {
   color: #5e6c84;
@@ -46,7 +47,8 @@
 }
 .plus__button {
   padding-right: 10px;
-  font-weight: 600;
+  font-weight: 700;
+  cursor: pointer;
   color: #5e6c84;
 }
 .card__div {
@@ -72,4 +74,73 @@
   color: #172b4d;
   background: hsla(0, 0%, 100%, 0.69);
   border-radius: 3px;
+}
+.modal{
+  width: 90% !important;
+  height: 90vh;
+  margin: auto;
+  margin-top: 20px;
+  border: 0px !important;
+  background-color: white;
+}
+.boardside{
+  width: 50%;
+}
+.board__inputs{
+  width: 65%;
+  margin: auto;
+}
+.imgside{
+  width: 50% !important;
+  background-image: url('../../image/Back.svg');
+  height: 90vh;
+}
+.head{
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0px;
+}
+.description{
+  font-size: 16px;
+  margin: 0px;
+  margin-top: 6px;
+  color: grey;
+}
+.team__divs{
+  margin:22px 0px;
+  width: 100%;
+}
+.name{
+  margin: 0px;
+  margin-bottom: 6px;
+  font-size:12px;
+}
+.name__input{
+  width:98%;
+  padding:10px 0px;
+  padding-left:5px;
+}
+.templates{
+  padding:10px 0px;
+  width: 100%;
+}
+.mild__text{
+  margin:0px;
+  color: grey;
+    font-size: 12px;
+}
+textarea{
+  width: 98%;
+  padding-left:5px;
+  padding-top: 5px;
+  margin-bottom:0px;
+}
+.continue__btn{
+  width:100%;
+  padding: 12px 0px;
+    font-size: 14px;
+  background-color: #5aac44;
+  box-shadow: none;
+  border: none;
+  color: #fff;
 }

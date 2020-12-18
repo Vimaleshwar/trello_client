@@ -205,6 +205,7 @@
 .addlist {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 .addlist__button {
   background-color: #5aac44;
