@@ -5,10 +5,10 @@ import BoardNav from './BoardNav'
 import Dropdown from './Dropdown'
 import Todo from './Todo'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import CloseIcon from '@material-ui/icons/Close';
 import Input from './input'
 import Newcard from './Newcard'
+import Anothercard from './Anothercard'
 let socket;
 const PORT = 'http://localhost:3001/';
 
@@ -16,13 +16,12 @@ const Chat = (props) => {
     const [db, setDB] = useState("")
     const [room, setRoom] = useState("")
     const [edit, setEdit] = useState(false)
+    const [values, setValues] = useState("")
     const [changeing, setChangeing] = useState(false)
     const [newtodo, setNewtodo] = useState(false)
     const [typemsg, setTypemsg] = useState(false)
-    const [values, setValues] = useState("")
     const [nextcard, setNextcard] = useState("")
     const [input, setInput] = useState("")
-    const[add,setadd]= useState(false)
     // const[roommessage,setRoommessage]=useState("")
     const [chatcardID, setChatcardID] = useState("")
     // const[inpdisabled,setInpdisabled]=useState(true)
@@ -79,6 +78,15 @@ const Chat = (props) => {
         socket.emit("addtodo",addtodo)
         setChangeing(!changeing)
     }
+    const addtodo = (e,setadd,i,values)=>{
+        setadd(false)
+        console.log(room)
+        const addtodo = {
+            values,room,i
+        }
+        socket.emit("addtodo",addtodo)
+        setChangeing(!changeing)
+    }
     const inputHandler = (e) => {
         setInput(e.target.value)
     }
@@ -116,32 +124,13 @@ const Chat = (props) => {
                                 })}
                                 {e.message.length === 0 ?
                                     <div id={i}>
-                                        
-                                            <Newcard addnewtodo={addnewtodo} addlist={addlist}  i={i}/>
-
+                                        <Newcard addnewtodo={addnewtodo} i={i}/>
                                     </div>
                                     :
-                                    
                                     <div id={i}>
-                                        {add ? 
-                                        <div className="adding__lists">
-                                        <div className="type__msg">
-                                            <input type="text" className="type__input" value={values} onChange={(e) => { setValues(e.target.value) }} />
-                                        </div>
-                                        <div className="addlist">
-                                                <button onClick={updateTodo} className="addlist__button">Add List</button>
-                                                <CloseIcon style={{ fontSize: "26px", color: "#172b4d", marginLeft: "10px", marginTop: "8px" }} />
-                                        </div>
+                                        <Anothercard addtodo={addnewtodo} i={i} />
                                     </div>
-                                        :
-                                        <div className="todo__filled__card" >
-                                        <button className="todo__filled__button" id={i} >+ Add another card</button>
-                                        <p className="icon">
-                                            <LibraryBooksIcon style={{ fontSize: "14px" }} />
-                                        </p>
-                                    </div>}
-                                        
-                                    </div>}
+                                }
                             </div>
                         </div>
                     </div>
@@ -151,12 +140,12 @@ const Chat = (props) => {
                 typemsg
                     ?
                     <div>
-                        <div className="adding__lists">
+                        <div className="adding__list">
                             <div className="type__msg">
                                 <input type="text" className="type__input" value={values} onChange={(e) => { setValues(e.target.value) }} />
 
                             </div>
-                            <div className="addlist">
+                            <div className="addl">
                                 <form onSubmit={addlist}>
                                     <button className="addlist__button">Add List</button>
                                     <CloseIcon style={{ fontSize: "26px", color: "#172b4d", marginLeft: "10px", marginTop: "8px" }} />

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import CloseIcon from '@material-ui/icons/Close';
 
-const Newcard = ({ i,addlist,addnewtodo }) => {
+const Newcard = ({ i,addnewtodo }) => {
     const [edits, setEdits] = useState(false)
     const [values, setValues] = useState("")
     return (
@@ -17,7 +17,7 @@ const Newcard = ({ i,addlist,addnewtodo }) => {
                         <div className="addlist">
                                 <button className="addlist__button" onClick={(e)=>addnewtodo(e,setEdits,i,values)} type="submit">Add List</button>
                                 <div style={{marginTop:"8px"}}>
-                                <CloseIcon style={{color: "#6b778c", fontSize: "26px", color: "#172b4d", marginLeft: "10px",cursor:"pointer" }} onClick={()=>setEdits(false)} />
+                                <CloseIcon style={{color: "#6b778c", fontSize: "26px",  marginLeft: "10px",cursor:"pointer" }} onClick={()=>setEdits(false)} />
                                 </div>
                         </div>
                     </div >

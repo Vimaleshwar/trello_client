@@ -165,7 +165,7 @@
   color: #172b4d;
   cursor: pointer;
   border: 0px;
-  width: 220px;
+  width: 100%;
   min-width: 219px;
   background: transparent;
   /* padding: 10px; */
@@ -207,6 +207,11 @@
   align-items: center;
   margin-top: 8px;
 }
+.addl {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
 .addlist__button {
   background-color: #5aac44;
   box-shadow: none;
@@ -221,10 +226,16 @@
   outline: none;
   cursor: pointer;
 }
-.adding__lists {
+.adding__list {
   background-color: #ebecf0;
   border-radius: 3px;
   padding: 4px;
+  /* padding-bottom: 2px; */
+}
+.adding__lists {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  padding: 4px 16px;
   /* padding-bottom: 2px; */
 }
 .drawer__div{
@@ -233,6 +244,9 @@
 .menu__div{
   border-bottom:1px solid #42526e5c;
   
+}
+.menu__div:hover{
+  cursor: pointer;
 }
 .menu__div2{
   margin-top: 24px;
@@ -250,11 +264,34 @@
   font-size: 20px;
   color: #42526e;
   margin: 0px;
-  margin-right:8px;
+  margin-right:12px;
 }
 .menu__list{
   font-size: 14px;
   font-weight: 500;
   margin: 0px;
   color: #42526e;
+}
+.image__div{
+  width: 18px ;
+  /* height:25px; */
+  border-radius: 6px;
+  margin-right: 12px;
+}
+.image__div_change{
+  width: 28% ;
+  /* height:25px; */
+  border-radius: 6px;
+  margin-right: 12px;
+}
+.icon__img{
+  width: 100%;
+}
+.icon__img_change{
+  width: 100%;
+}
+.backimg__div{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 20px;
 }

@@ -16,41 +16,47 @@ let socket;
 const Menu = (props) => {
   const[menuoption,setMenuoption]=useState("")
   const[board,setBoard]=useState("")
-  const[addboard,setAddboard]=useState(true)
+  const[addboard,setAddboard]=useState(false)
   const[template,setTemplate]=useState("")
   const[id,setID] =useState("")
   const[teamname,setTeamname]=useState("")
   const[teamdescription,setTeamdescription]=useState("")
   const [adc,setadc]=useState("")
+  const [chang, setChang] = useState(false)
   useEffect(()=>{
     socket=io(PORT)
     const id =props.match.params.id
     setID(id)
     console.log(id);
     socket.emit("getuser",id)
-    socket.on("getmenu",(db)=>{
-      const menulist = db.menuoption
-      const boards = db.board
-      const template = db.templates
+    socket.on("getmenu",(menuboard)=>{
+      console.log(menuboard,"OOOOOOOO")
+      const menulist = menuboard.db.menuoption
+      const boards = menuboard.boardlist
+      const template = menuboard.db.templates
       setBoard(boards)
       setMenuoption(menulist)
       setTemplate(template)
     })
-  },[PORT,adc])
-  useEffect(()=>{
-
-  },[adc])
+    setChang(true)
+  },[PORT,chang])
+//   useEffect(() => {
+//     socket = io(PORT);
+// }, []);
   const addTeam = (e) =>{
     e.preventDefault()
+    
+    setadc(teamname)
+    setAddboard(false)
     const team = {
       teamdescription,
       teamname
     }
-    setadc(teamname)
-    setAddboard(false)
     socket.emit("newcard",team)
-    socket.on("boardadded",teamname)
-    
+    socket.on("res",(newboard)=>{
+      console.log(newboard)
+    })
+    setChang(false)
   }
 
   return (
