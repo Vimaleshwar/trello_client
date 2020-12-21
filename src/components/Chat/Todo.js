@@ -6,7 +6,7 @@ import io from "socket.io-client";
 
 
 let socket;
-const PORT = 'http://localhost:3001/';
+const PORT = 'https://trello-clone-be.herokuapp.com/';
 function Todo(props) {
     
     const[typemsg,setTypemsg]=useState(false)

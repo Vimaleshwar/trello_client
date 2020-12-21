@@ -11,7 +11,7 @@ import "./menu.css"
 
 
 
-const PORT = 'http://localhost:3001/';
+const PORT = 'https://trello-clone-be.herokuapp.com/';
 let socket;
 const Menu = (props) => {
   const[menuoption,setMenuoption]=useState("")

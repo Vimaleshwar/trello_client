@@ -10,7 +10,7 @@ import Input from './input'
 import Newcard from './Newcard'
 import Anothercard from './Anothercard'
 let socket;
-const PORT = 'http://localhost:3001/';
+const PORT = 'https://trello-clone-be.herokuapp.com/';
 
 const Chat = (props) => {
     const [db, setDB] = useState("")
