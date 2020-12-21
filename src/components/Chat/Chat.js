@@ -28,6 +28,7 @@ const Chat = (props) => {
     useEffect(() => {
         socket = io(PORT)
         const chatroom = props.match.params.chatroom
+        console.log(chatroom,"consol")
         setRoom(chatroom)
         const id = props.match.params.id
         socket.emit("join", (chatroom))
@@ -79,6 +80,7 @@ const Chat = (props) => {
         setChangeing(!changeing)
     }
     const addtodo = (e,setadd,i,values)=>{
+        
         setadd(false)
         console.log(room)
         const addtodo = {
@@ -93,10 +95,13 @@ const Chat = (props) => {
     return (
         <div className="background__image">
             <Navbar
+            // room={room}
             //  id={id&&id}
             />
             <div className="nav__2">
-                <BoardNav chatroom={room} />
+                <BoardNav 
+                chatroom={room} 
+                />
                 {/* <Todo room={room}
        cards={db.cards}
        chatcardID={chatcardID}

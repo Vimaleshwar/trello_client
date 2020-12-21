@@ -1,18 +1,26 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Dropdown from './Dropdown'
 import Button from './Button'
 import Card from '../../image/card.jpg'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import Drawer from './drawer'
 
-const BoardNav = (props) => {
+
+const BoardNav = ({chatroom}) => {
+    const[val,setVal] =useState("")
+    console.log(chatroom)
+    useEffect(()=>{
+    setVal(chatroom)
+
+    })
+
     return (
         <div className="nav">
             <div className="nav__left">
                 {/* <Dropdown/> */}
                 <Button text={"Board"}/>
                 <div className="chatroom__div">
-                    <h3 className="chatroom">{props.chatroom}</h3>
+                    <input type="text" onChange={(e)=>setVal(e.target.value)}  className="chatroom" value={val}/>
                 </div>
                 <Button text={<StarBorderOutlinedIcon style={{fontSize:"18px"}}/>}/>
                 <Button text="general"/>

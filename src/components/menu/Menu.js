@@ -50,7 +50,8 @@ const Menu = (props) => {
     setAddboard(false)
     const team = {
       teamdescription,
-      teamname
+      teamname,
+      id
     }
     socket.emit("newcard",team)
     socket.on("res",(newboard)=>{
@@ -74,7 +75,7 @@ const Menu = (props) => {
           {menuoption && menuoption.map((e,i)=>{
             return(
               <div key={i} className="menuoption__div">
-                <Link to="/" className="link"><li className="menuoption__list">{e}</li></Link>
+                <Link  className="link"><li className="menuoption__list">{e}</li></Link>
                </div> 
             )
           })}
@@ -143,7 +144,7 @@ const Menu = (props) => {
         </Modal>
             </div>
             <div className="menuoption">
-          {menuoption && menuoption.map((e,i)=>{
+          {board && board.map((e,i)=>{
             return(
               <div key={i}  className="menuoption__div">
                 <Link to="/" className="link"><li className="menuoption__list">{e}</li></Link>

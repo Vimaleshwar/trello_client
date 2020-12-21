@@ -18,7 +18,7 @@ const [values, setValues] = useState("")
                 <input type="text" className="type__input" value={values} onChange={(e) => { setValues(e.target.value) }} />
             </div>
             <div className="addlist">
-                    <button onClick={(e)=>addtodo(e,setadd,i,values)} className="addlist__button">Add List</button>
+                    <button onClick={(e)=>addtodo(e,setadd,i,values,setValues)} className="addlist__button">Add List</button>
                     <CloseIcon onClick={() => setadd(true)} style={{ fontSize: "26px", color: "#172b4d", marginLeft: "10px", marginTop: "8px" }} />
             </div>
         </div>

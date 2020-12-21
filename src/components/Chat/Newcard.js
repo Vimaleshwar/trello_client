@@ -17,7 +17,7 @@ const Newcard = ({ i,addnewtodo }) => {
                         <div className="addlist">
                                 <button className="addlist__button" onClick={(e)=>addnewtodo(e,setEdits,i,values)} type="submit">Add List</button>
                                 <div style={{marginTop:"8px"}}>
-                                <CloseIcon style={{color: "#6b778c", fontSize: "26px",  marginLeft: "10px",cursor:"pointer" }} onClick={()=>setEdits(false)} />
+                                <CloseIcon style={{color: "#6b778c", fontSize: "26px", marginLeft: "10px",cursor:"pointer" }} onClick={()=>setEdits(false)} />
                                 </div>
                         </div>
                     </div >
